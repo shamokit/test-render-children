@@ -1,16 +1,25 @@
 <script lang="ts">
-	import '../lib/app.css';
-
-	import { mediaQueryAction } from '$lib/mediaQuery.store.action';
+	import type { PropsWithChildren } from 'svelte';
+	import '../css/app.css';
 	import { page } from '$app/stores';
-  import Test from '../lib/Test.svelte'
-  let { children } = $props();
+	import Svg from '$lib/components/svg/index.svelte';
+	import Header from '$lib/components/layouts/header/index.svelte';
+	import Footer from '$lib/components/layouts/footer/index.svelte';
+	import { mediaQueryAction } from '$lib/functions/mediaQuery.store.action';
+
+	let { children } = $props<
+		PropsWithChildren<{
+			children: string;
+		}, never>
+	>();
 </script>
 
 <svelte:document use:mediaQueryAction />
-<div class="test">
-  <Test isHome={$page.route.id === '/'} />
-  <div class="test2">
-    {@render children()}
-  </div>
+<div class="flex flex-col min-h-screen pt-[var(--header-height)] bg-surface-300 first:hidden">
+	<Svg />
+	<Header isHome={$page.route.id === '/'} />
+	<div class="flex-1">
+		{@render children()}
+	</div>
+	<Footer />
 </div>
