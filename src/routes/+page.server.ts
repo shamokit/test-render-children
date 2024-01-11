@@ -1,3 +1,4 @@
+export const prerender = true;
 export async function load({ fetch }) {
 	const [response1, response2] = await Promise.all([
 		fetch('https://svatus.pages.dev/status/200'),
