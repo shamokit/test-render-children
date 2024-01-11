@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Image from '../lib/Image.svelte';
 	let { data } = $props();
 	let { data1, data2, zenn, qiita, thinkings, photos } = data;
 </script>
@@ -13,3 +14,5 @@ zenn: {JSON.stringify(zenn)}<br />
 qiita: {JSON.stringify(qiita)}<br />
 thinkings: {JSON.stringify(thinkings)}<br />
 photos: {JSON.stringify(photos)}
+
+<Image />
