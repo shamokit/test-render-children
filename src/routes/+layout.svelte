@@ -4,9 +4,9 @@
   let { children } = $props();
 </script>
 
+<svelte:document use:mediaQueryAction />
 <div class="test">
-  <Test />
-  {$page.route.id}
+  <Test isHome={$page.route.id === '/'} />
   <div class="test2">
     {@render children()}
   </div>
