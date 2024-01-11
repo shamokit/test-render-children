@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { mediaQueryAction } from '$lib/mediaQuery.store.action';
 	import { page } from '$app/stores';
   import Test from '../lib/Test.svelte'
   let { children } = $props();
