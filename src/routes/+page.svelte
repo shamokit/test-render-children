@@ -1,1 +1,7 @@
-test
+<script lang="ts">
+	let { data } = $props();
+	let { data1, data2 } = data;
+</script>
+
+test data1: {JSON.stringify(data1)}<br />
+data2: {JSON.stringify(data2)}
