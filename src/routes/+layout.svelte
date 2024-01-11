@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PropsWithChildren } from 'svelte';
   import Test from '../lib/Test.svelte'
   import {mediaQueryAction} from '../lib/mediaQuery.store.action'
   let { children } = $props<
