@@ -11,7 +11,14 @@
 test data1: {JSON.stringify(data1)}<br />
 data2: {JSON.stringify(data2)}
 
-zenn: {JSON.stringify(zenn)}<br />
+zenn
+<ul>
+	{#each zenn as post}
+		<li>
+			{@html post.title.replace(/\r?\n/g, '<br />')}<br />
+		</li>
+	{/each}
+</ul>
 qiita: {JSON.stringify(qiita)}<br />
 thinkings: {JSON.stringify(thinkings)}<br />
 photos: {JSON.stringify(photos)}
