@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '../lib/app.css';
+
 	import { mediaQueryAction } from '$lib/mediaQuery.store.action';
 	import { page } from '$app/stores';
   import Test from '../lib/Test.svelte'
