@@ -8,6 +8,9 @@ dependencies:
   '@sveltejs/adapter-cloudflare':
     specifier: ^3.0.1
     version: 3.0.1(@sveltejs/kit@2.3.0)
+  dayjs:
+    specifier: ^1.11.10
+    version: 1.11.10
   microcms-js-sdk:
     specifier: ^2.7.0
     version: 2.7.0
@@ -573,6 +576,10 @@ packages:
       node-fetch: 2.7.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
+    dev: false
+
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
     dev: false
 
   /debug@4.3.4:

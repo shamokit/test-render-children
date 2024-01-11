@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Image from '../lib/Image.svelte';
+	import Day from '../lib/Day.svelte';
 	let { data } = $props();
 	let { data1, data2, zenn, qiita, thinkings, photos } = data;
 </script>
@@ -23,7 +24,7 @@ photos: {JSON.stringify(photos)}
 					alt="{photo.caption}"
 					width="{600}"
 					height="{600}"
-				/></a
+				/><Day date="2023-01-28T14:21:18.984Z" /></a
 			>
 		</li>
 	{/each}
