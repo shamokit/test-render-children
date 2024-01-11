@@ -1,7 +1,11 @@
 <script lang="ts">
   import Test from '../lib/Test.svelte'
   import {mediaQueryAction} from '../lib/mediaQuery.store.action'
-  let { children } = $props();
+  let { children } = $props<
+		PropsWithChildren<{
+			children: string;
+		}, never>
+	>();
 </script>
 
 <svelte:document use:mediaQueryAction />
