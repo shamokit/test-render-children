@@ -1,3 +1,5 @@
+import { client } from '$lib/microcms.server';
+
 export const prerender = true;
 export const load = async ({ fetch }) => {
 	const [qiitaResponse, zennResponse] = await Promise.all([
@@ -16,13 +18,20 @@ export const load = async ({ fetch }) => {
 		fetch('https://svatus.pages.dev/status/200'),
 		fetch('https://svatus.pages.dev/status/200'),
 	]);
-	const [data1, data2] = await Promise.all([
+	const [data1, data2, thinkings] = await Promise.all([
 		response1.json(),
 		response2.json(),
+		client.getList({
+			endpoint: 'thinking',
+			queries: {
+				limit: 9,
+			},
+		}),
 	]);
 	return {
 		zenn: zenn.items.slice(0, 3),
 		qiita: qiita.items.slice(0, 3),
+		thinkings,
 		data1,
 		data2,
 	};

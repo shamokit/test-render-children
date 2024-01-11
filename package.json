@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-cloudflare": "^3.0.1"
+		"@sveltejs/adapter-cloudflare": "^3.0.1",
+		"microcms-js-sdk": "^2.7.0"
 	}
 }
