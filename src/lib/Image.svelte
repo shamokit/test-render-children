@@ -1,9 +1,13 @@
 <script lang="ts">
 	import IntersectionObserver from 'svelte-intersection-observer';
 
+	export let src: string = 'https://dummyimage.com/600x400/000/fff';
+	export let alt: string = '';
+	export let width: number = 600;
+	export let height: number = 600;
+
 	let elementOnce: HTMLElement;
 	let intersectOnce: boolean;
-	const src = 'https://dummyimage.com/600x400/000/fff';
 	$: isIntersecting = false;
 </script>
 
@@ -20,8 +24,8 @@
 		src="{isIntersecting
 			? src
 			: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAQSURBVHgBAQUA+v8ADVBp/wL6AcYxvWp0AAAAAElFTkSuQmCC'}"
-		alt=""
-		width="600"
-		height="400"
+		{alt}
+		{width}
+		{height}
 	/>
 </IntersectionObserver>

@@ -14,5 +14,18 @@ zenn: {JSON.stringify(zenn)}<br />
 qiita: {JSON.stringify(qiita)}<br />
 thinkings: {JSON.stringify(thinkings)}<br />
 photos: {JSON.stringify(photos)}
-
-<Image />
+<ul>
+	{#each data.photos as photo}
+		<li>
+			<a href="{photo.permalink}" target="_blank" rel="noopener noreferrer"
+				><Image
+					src="{photo.media_url}"
+					alt="{photo.caption}"
+					width="{600}"
+					height="{600}"
+				/></a
+			>
+		</li>
+	{/each}
+</ul>
+<Image height="{400}" />
