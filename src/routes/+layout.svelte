@@ -1,6 +1,10 @@
 <script lang="ts">
+  import Test from '../lib/Test.svelte'
   let { children } = $props();
 </script>
 <div class="test">
-  {@render children()}
+  <Test />
+  <div class="test2">
+    {@render children()}
+  </div>
 </div>
