@@ -3,6 +3,9 @@
 	let { data1, data2, zenn, qiita, thinkings, photos } = data;
 </script>
 
+<svelte:head>
+	<title>test</title>
+</svelte:head>
 test data1: {JSON.stringify(data1)}<br />
 data2: {JSON.stringify(data2)}
 
